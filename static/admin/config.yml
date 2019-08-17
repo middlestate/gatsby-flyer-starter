@@ -1,0 +1,172 @@
+backend:
+  name: git-gateway
+  # test-repo
+  # git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'home'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'home-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - {
+              label: Offerings,
+              name: offerings,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Slug, name: slug, widget: string },
+                        { label: Name, name: name, widget: string },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Partners,
+              name: partners,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Logo,
+                    name: logo,
+                    widget: list,
+                    fields: [{ label: Image, name: image, widget: image }],
+                  },
+                ],
+            }
+          - {
+              label: Quote,
+              name: quote,
+              widget: object,
+              fields:
+                [
+                  { label: Text, name: text, widget: text },
+                  { label: Name, name: name, widget: string },
+                  { label: Title, name: title, widget: string },
+                ],
+            }
+          - {
+              label: Advantage,
+              name: advantages,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
+            }
+          - { label: 'Meta Title', name: meta_title, widget: string }
+          - { label: 'Meta Description', name: meta_description, widget: text }
+      - file: 'src/pages/highlights/index.md'
+        label: 'Highlights Page'
+        name: 'highlights'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'highlights-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - { label: 'Meta Title', name: meta_title, widget: string }
+          - { label: 'Meta Description', name: meta_description, widget: text }
+      - file: 'src/pages/contact/index.md'
+        label: 'Contact Page'
+        name: 'contact'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'contact-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - {
+              label: Contact,
+              name: contact,
+              widget: list,
+              fields:
+                [
+                  { label: Email, name: email, widget: string },
+                  { label: Description, name: description, widget: string },
+                ],
+            }
+          - { label: 'Meta Title', name: meta_title, widget: string }
+          - { label: 'Meta Description', name: meta_description, widget: text }
+      - file: 'src/pages/locator/index.md'
+        label: 'Store Locator'
+        name: 'locator'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'locator-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - { label: 'Meta Title', name: meta_title, widget: string }
+          - {
+              label: 'Meta Description',
+              name: meta_description,
+              widget: string,
+            }
+  - name: 'product'
+    label: 'Products'
+    folder: 'src/pages/products'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'product-page',
+        }
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Heading, name: heading, widget: string }
+      - { label: Subheading, name: subheading, widget: string }
+      - { label: 'Product Image', name: product_image, widget: image }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }
+      - { label: 'Meta Title', name: meta_title, widget: string }
+      - { label: 'Meta Description', name: meta_description, widget: text }

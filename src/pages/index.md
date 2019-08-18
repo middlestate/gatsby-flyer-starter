@@ -1,8 +1,9 @@
 ---
-templateKey: home-page
+templateKey: brand-flyer
+slug: ea-flyer
 title: Equine Advantage
 heading: A portrait of health, vitality and life
-subheading: Formulated by veteranarians
+subheading: Formulated by veteran
 offerings:
   blurbs:
     - image: /img/EquineAdvantage_Render.png

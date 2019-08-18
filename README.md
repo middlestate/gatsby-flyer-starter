@@ -34,4 +34,4 @@
 ### NETLIFY
 
 You will need to set up new netlify for the flyer and give it a nice name
-other than what netlify generates (although some of the nelify names are fun!)
+other than what netlify generates (although some of the netlify names are fun!)

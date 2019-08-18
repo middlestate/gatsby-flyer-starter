@@ -14,7 +14,7 @@
 
 ### NOTES
 
-- when uploading a Logo, also upload a <white> version
+- when uploading a Logo, also upload a *white* version
 - currently, without a more complicated version of the flyer-starter
   editing footer and navbar contents will require chanes to
   config.js variables in the project root folder

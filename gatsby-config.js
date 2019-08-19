@@ -152,9 +152,7 @@ module.exports = {
             serialize (ctx) {
               const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
               return ctx.query.allMarkdownRemark.edges
-                .filter(
-                  edge => edge.node.frontmatter.templateKey === 'product-page'
-                )
+                .filter(edge => edge.node.frontmatter.templateKey === 'main-page')
                 .map(edge => ({
                   categories: edge.node.frontmatter.tags,
                   title: edge.node.frontmatter.title,
@@ -179,7 +177,6 @@ module.exports = {
                             frontmatter {
                               title
                               templateKey
-                              tags
                             }
                           }
                         }
@@ -201,7 +198,6 @@ module.exports = {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
           MarkdownRemark: {
             title: node => node.frontmatter.title,
-            tags: node => node.frontmatter.tags,
             slug: node => node.fields.slug,
           },
         },

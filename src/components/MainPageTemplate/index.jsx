@@ -9,12 +9,12 @@ import Partner from '../Partners'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 
-const HomePageTemplate = ({
+const MainPageTemplate = ({
   title,
   meta_title,
   meta_description,
   nav_logo,
-  hero,
+  hero_image,
   brand_heading,
   footer_logo,
   newsletter,
@@ -59,9 +59,9 @@ const HomePageTemplate = ({
       <figure className='is-3by1'>
         <img
           className='image'
-          src={hero.image}
+          src={hero_image.image}
           style={{ marginTop: -50 }}
-          alt={hero.alt}
+          alt={hero_image.alt}
         />
       </figure>
     </section>
@@ -75,23 +75,24 @@ const HomePageTemplate = ({
       </div>
       <Products gridItems={offerings.blurbs} logo={partners.logo} />
     </section>
-    <Quote text={quote.text} name={quote.name} title={quote.title} />
+    <Quote text={quote.text} name={quote.name} title={quote.title} image={quote.image}/>
     <Advantage gridItems={advantages.blurbs} />
     <Footer
       logo={footer_logo}
       email={email}
       newsletter={newsletter}
+      />
   </div>
 )
 
-HomePageTemplate.propTypes = {
+MainPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   brand_heading: PropTypes.string,
-  hero: PropTypes.shape({
+  hero_image: PropTypes.shape({
     image: PropTypes.string,
     alt: PropTypes.string,
   }),
@@ -109,10 +110,11 @@ HomePageTemplate.propTypes = {
     text: PropTypes.string,
     name: PropTypes.string,
     title: PropTypes.string,
+    image: PropTypes.string
   }),
   advantages: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
 }
 
-export default HomePageTemplate
+export default MainPageTemplate

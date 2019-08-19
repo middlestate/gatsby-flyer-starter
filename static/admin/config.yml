@@ -27,8 +27,8 @@ collections:
       - { label: Heading, name: heading, widget: string }
       - { label: Subheading, name: subheading, widget: string }
       - {
-          label: Hero,
-          name: hero,
+          label: 'Hero Image',
+          name: hero_image,
           widget: object,
           fields:
             [

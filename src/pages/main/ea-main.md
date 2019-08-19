@@ -1,10 +1,10 @@
 ---
 templateKey: main-page
-slug: ea-flyer-main
+slug: ea-main
 nav_logo: /img/equineadvantage_logo.svg
 title: Equine Advantage
 heading: A portrait of health, vitality and life
-hero:
+hero_image:
   image: /img/horse-header.png
   alt: An oil painting of a mare and her foul
 subheading: Formulated by veteran
@@ -51,6 +51,7 @@ quote:
     "We've been feeding our champion horse Equine Advantage with great results. She really enjoys the feed and the results have been undeniable."
   name: Betsy Ross
   title: Owner of Dancing Queen
+  image: /img/horseback.png
 advantages:
   blurbs:
     - image: /img/fixed_formula-icon-01.svg

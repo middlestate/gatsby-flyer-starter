@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 // import { Link } from 'gatsby'
 import Content from '../Content'
 import NavBar from '../NavBar'
@@ -32,6 +32,7 @@ const AboutPageTemplate = ({
         <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>{meta_title}</h1>
         <h2 className='subtitle is-size-6 has-text-weight-light is-italic'>{meta_description}</h2>
         <img src={heading_image} alt={subheading} />
+        <img src={hero_image.image} />
         <div className='columns is-multiline is-mobile is-centered'>
           <div className='column is-5 is-half-mobile'>
             <figure className='image is-256x256 is-hidden-mobile'>

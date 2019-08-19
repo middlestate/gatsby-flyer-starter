@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Quote = ({ text, name, title }) => (
-  <div className='section is-paddingless is-marginless is-darkest-grey'>
-    <div className='hero is-warning is-medium'>
+const Quote = ({ text, name, title, image }) => (
+  <div className='section is-paddingless is-marginless'>
+    <div
+      className='hero is-darkest-grey is-medium'
+      style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover' }}>
       <div className='hero-body'>
         <div className='container'>
           <div className='columns is-centered'>
@@ -32,6 +34,7 @@ Quote.propTypes = {
   text: PropTypes.string,
   name: PropTypes.string,
   title: PropTypes.string,
+  image: PropTypes.string,
 }
 
 export default Quote

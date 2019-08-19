@@ -1,7 +1,7 @@
 import CMS from 'netlify-cms-app'
 import '../assets/sass/styles.sass'
-import MainPagePreview from './preview-templates/HomePagePreview'
-import AboutPagePreview from './preview-templates/ProductsPreview'
+import MainPagePreview from './preview-templates/MainPagePreview'
+import AboutPagePreview from './preview-templates/AboutPagePreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
 
 CMS.registerPreviewTemplate('home', MainPagePreview)

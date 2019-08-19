@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-// const createPaginatedPages = require('gatsby-paginate')
+const createPaginatedPages = require('gatsby-paginate')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -16,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
+              title
               templateKey
               slug
             }
@@ -29,38 +30,42 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const mainPages = result.data.allMarkdownRemark.edges
-    const aboutPages = result.data.allMarkdownRemark.edges
-
+    const allPages = result.data.allMarkdownRemark.edges
     // Post pages:
-    let mainPosts = []
     let aboutPosts = []
+    let brandPosts = []
     // Iterate through each post/page, putting all found posts (where templateKey = article-page) into `posts`
-    mainPages.forEach(edge => {
-      if (_.isMatch(edge.node.frontmatter, { templateKey: 'main-page' })) {
-        mainPosts = mainPosts.concat(edge)
+
+    allPages.forEach(edge => {
+      if (_.isMatch(edge.node.frontmatter, { templateKey: 'brand-page' })) {
+        brandPosts = brandPosts.concat(edge)
       }
     })
 
-    aboutPages.forEach(edge => {
+    allPages.forEach(edge => {
       if (_.isMatch(edge.node.frontmatter, { templateKey: 'about-page' })) {
         aboutPosts = aboutPosts.concat(edge)
       }
     })
 
-    mainPosts.forEach(edge => {
-      const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      })
+    createPaginatedPages({
+      edges: brandPosts,
+      createPage: createPage,
+      pageTemplate: 'src/templates/brand-page.js',
+      pageLength: 6, // This is optional and defaults to 10 if not used
+      pathPrefix: 'brand', // This is optional and defaults to an empty string if not used
+      context: {}, // This is optional and defaults to an empty object if not used
     })
 
-    aboutPosts.forEach(edge => {
+    createPaginatedPages({
+      edges: aboutPosts,
+      createPage: createPage,
+      pageTemplate: 'src/templates/about-page.js',
+      pathPrefix: 'about',
+      contexr: {},
+    })
+
+    allPages.forEach(edge => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,

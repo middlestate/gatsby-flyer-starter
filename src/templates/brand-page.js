@@ -2,37 +2,37 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { HTMLContent } from '../components/Content'
-import MainPageTemplate from '../components/MainPageTemplate'
+import BrandPageTemplate from '../components/BrandPageTemplate'
 import Layout from '../components/Layout'
 
-const MainPage = ({ data }) => {
-  const { markdownRemark: mainPosts } = data
+const BrandPage = ({ data }) => {
+  const { markdownRemark: brandPosts } = data
   return (
     <Layout>
-      <MainPageTemplate
-        content={mainPosts.html}
+      <BrandPageTemplate
+        content={brandPosts.html}
         contentComponent={HTMLContent}
-        nav_logo={mainPosts.frontmatter.nav_logo}
-        title={mainPosts.frontmatter.title}
-        heading={mainPosts.frontmatter.heading}
-        subheading={mainPosts.frontmatter.subheading}
-        hero_image={mainPosts.frontmatter.hero_image}
-        brand_heading={mainPosts.frontmatter.brand_heading}
-        offerings={mainPosts.frontmatter.offerings}
-        partners={mainPosts.frontmatter.partners}
-        quote={mainPosts.frontmatter.quote}
-        advantages={mainPosts.frontmatter.advantages}
-        footer_logo={mainPosts.frontmatter.footer_logo}
-        email={mainPosts.frontmatter.email}
-        newsletter={mainPosts.frontmatter.newsletter}
-        meta_title={mainPosts.frontmatter.meta_title}
-        meta_description={mainPosts.frontmatter.meta_description}
+        nav_logo={brandPosts.frontmatter.nav_logo}
+        title={brandPosts.frontmatter.title}
+        heading={brandPosts.frontmatter.heading}
+        subheading={brandPosts.frontmatter.subheading}
+        hero_image={brandPosts.frontmatter.hero_image}
+        brand_heading={brandPosts.frontmatter.brand_heading}
+        offerings={brandPosts.frontmatter.offerings}
+        partners={brandPosts.frontmatter.partners}
+        quote={brandPosts.frontmatter.quote}
+        advantages={brandPosts.frontmatter.advantages}
+        footer_logo={brandPosts.frontmatter.footer_logo}
+        email={brandPosts.frontmatter.email}
+        newsletter={brandPosts.frontmatter.newsletter}
+        meta_title={brandPosts.frontmatter.meta_title}
+        meta_description={brandPosts.frontmatter.meta_description}
       />
     </Layout>
   )
 }
 
-MainPage.propTypes = {
+BrandPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -40,10 +40,10 @@ MainPage.propTypes = {
   }),
 }
 
-export default MainPage
+export default BrandPage
 
 export const pageQuery = graphql`
-  query IndexPage($id: String!) {
+  query BrandPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

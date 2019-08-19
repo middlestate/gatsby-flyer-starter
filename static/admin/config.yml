@@ -9,11 +9,46 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'main'
-    label: 'Main Page'
-    folder: 'src/pages/main'
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/pages/index.md'
+        label: 'Home Page'
+        name: 'home'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'home-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - {
+              label: Brands,
+              name: brands,
+              widget: fields,
+              fields:
+                [
+                  {
+                    label: Links,
+                    name: links,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                        { label: Text, name: text, widget: text },
+                        { label: 'Product Page Slug', name: slug, widget: tex },
+                      ],
+                  },
+                ],
+            }
+  - name: 'brand'
+    label: 'Brand Page'
+    folder: 'src/pages/brand'
     create: true
-    slug: { { 'slug' } }
+    slug: '{{slug}}'
     fields:
       - {
           label: 'Template Key',

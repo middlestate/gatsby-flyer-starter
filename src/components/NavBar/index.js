@@ -34,7 +34,7 @@ class NavBar extends React.Component {
         </div>
         <div className={`navbar-menu ${this.state.isActive ? 'is-active' : ''}`} id='navMenu'>
           <div className='navbar-end' style={{ flex: 1, justifyContent: 'center' }}>
-            <a href='/#products' target='_self' className='navbar-item'>
+            <a href='/' target='_self' className='navbar-item'>
               Products
             </a>
             <a href='#contact' target='_self' className='navbar-item'>

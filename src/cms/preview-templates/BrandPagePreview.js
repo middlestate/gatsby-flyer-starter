@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MainPageTemplate from '../../components/MainPageTemplate'
-const MainPagePreview = ({ entry, getAsset }) => {
+import BrandPageTemplate from '../../components/BrandPageTemplate'
+const BrandPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'offerings', 'blurbs'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
@@ -12,7 +12,7 @@ const MainPagePreview = ({ entry, getAsset }) => {
   const advantage = entryAdvantage ? entryAdvantage.toJS() : []
 
   return (
-    <MainPageTemplate
+    <BrandPageTemplate
       title={entry.getIn(['data', 'title'])}
       meta_title={entry.getIn(['data', 'meta_title'])}
       meta_description={entry.getIn(['data', 'meta_description'])}
@@ -31,11 +31,11 @@ const MainPagePreview = ({ entry, getAsset }) => {
   )
 }
 
-MainPagePreview.propTypes = {
+BrandPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default MainPagePreview
+export default BrandPagePreview

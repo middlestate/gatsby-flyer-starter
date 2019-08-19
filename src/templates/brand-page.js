@@ -43,7 +43,7 @@ BrandPage.propTypes = {
 export default BrandPage
 
 export const pageQuery = graphql`
-  query BrandPage($id: String!) {
+  query BrandPage($id: String) {
     markdownRemark(id: { eq: $id }) {
       id
       html

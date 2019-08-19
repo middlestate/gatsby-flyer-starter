@@ -1,15 +1,24 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import Products from '../Products'
 import Quote from '../Quote'
 import Advantage from '../Advantage'
+import Partner from '../Partners'
+import NavBar from '../NavBar'
+import Footer from '../Footer'
 
 const HomePageTemplate = ({
   title,
   meta_title,
   meta_description,
+  nav_logo,
+  hero,
+  brand_heading,
+  footer_logo,
+  newsletter,
+  email,
   heading,
   subheading,
   offerings,
@@ -22,6 +31,7 @@ const HomePageTemplate = ({
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
+    <NavBar logo={nav_logo} />
     <section className='hero is-white has-section-padding-none'>
       <div className='hero-body'>
         <div className='container'>
@@ -35,9 +45,9 @@ const HomePageTemplate = ({
             <div className='column is-6  '>
               <div className='section is-hidden-mobile'>
                 <img
-                  src='/img/equineadvantage_logo.svg'
+                  src={nav_logo}
                   style={{ height: 186, width: 350, marginTop: -10 }}
-                  alt='Equine Advantage logo'
+                  alt='brand logo'
                 />
               </div>
             </div>
@@ -46,32 +56,20 @@ const HomePageTemplate = ({
       </div>
     </section>
     <section className='section is-paddingless' style={{ padding: 0 }}>
-      {/* <div className='columns is-mobile is-centered'>
-        <div className='column is-three-fifths-desktop is-one-quarter-mobile' />
-        <div className='column'>
-          <div className='button is-low-starch-blue is-border-low-starch-blue is-medium has-text-right is-radiusless'
-            style={{ zIndex: 10 }}
-          >
-            <Link className='has-text-black is-size-6 has-text-weight-bold' to='/'>
-            ORDER A SAMPLE
-            </Link>
-          </div>
-        </div>
-      </div> */}
       <figure className='is-3by1'>
         <img
           className='image'
-          src='/img/horse-header.png'
+          src={hero.image}
           style={{ marginTop: -50 }}
-          alt='An oil painting of a mare and her foul'
+          alt={hero.alt}
         />
       </figure>
     </section>
-    <section id='products' className='section has-text-centered'>
+    <section className='section is-white'>
       <div className='columns is-centered'>
         <div className='column is-half'>
           <div className='is-size-5 has-text-weight-bold has-text-centered has-text-black'>
-            <u>EQUINE ADVANTAGE PRODUCTS</u>
+            <u>{brand_heading}</u>
           </div>
         </div>
       </div>
@@ -79,6 +77,10 @@ const HomePageTemplate = ({
     </section>
     <Quote text={quote.text} name={quote.name} title={quote.title} />
     <Advantage gridItems={advantages.blurbs} />
+    <Footer
+      logo={footer_logo}
+      email={email}
+      newsletter={newsletter}
   </div>
 )
 
@@ -88,6 +90,15 @@ HomePageTemplate.propTypes = {
   meta_description: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  brand_heading: PropTypes.string,
+  hero: PropTypes.shape({
+    image: PropTypes.string,
+    alt: PropTypes.string,
+  }),
+  nav_logo: PropTypes.string,
+  footer_logo: PropTypes.string,
+  newsletter: PropTypes.string,
+  email: PropTypes.string,
   offerings: PropTypes.shape({
     blurbs: PropTypes.array,
   }),

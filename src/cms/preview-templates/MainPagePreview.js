@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import HomePageTemplate from '../../components/HomePageTemplate'
-const HomePagePreview = ({ entry, getAsset }) => {
+import MainPageTemplate from '../../components/MainPageTemplate'
+const MainPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'offerings', 'blurbs'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
@@ -12,7 +12,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
   const advantage = entryAdvantage ? entryAdvantage.toJS() : []
 
   return (
-    <HomePageTemplate
+    <MainPageTemplate
       title={entry.getIn(['data', 'title'])}
       meta_title={entry.getIn(['data', 'meta_title'])}
       meta_description={entry.getIn(['data', 'meta_description'])}
@@ -31,11 +31,11 @@ const HomePagePreview = ({ entry, getAsset }) => {
   )
 }
 
-HomePagePreview.propTypes = {
+MainPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default HomePagePreview
+export default MainPagePreview

@@ -1,9 +1,14 @@
 ---
-templateKey: brand-flyer
-slug: ea-flyer
+templateKey: main-page
+slug: ea-flyer-main
+nav_logo: /img/equineadvantage_logo.svg
 title: Equine Advantage
 heading: A portrait of health, vitality and life
+hero:
+  image: /img/horse-header.png
+  alt: An oil painting of a mare and her foul
 subheading: Formulated by veteran
+brand_heading: EQUINE ADVANTAGE PRODUCTS
 offerings:
   blurbs:
     - image: /img/EquineAdvantage_Render.png
@@ -63,6 +68,9 @@ advantages:
     - image: /img/biotin_enhanced_icon.svg
       text: >
         Pre and pro biotics enables optimum digestion and helps maintain intestinal health
+footer_logo: /img/equineadvantage_logo_white.svg
+email: https://email.com
+newsletter: https://newsletter.com
 meta_title: Equine Advantage
 meta_description: >-
   The best a horse can get.

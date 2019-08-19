@@ -11,12 +11,23 @@ const Products = ({ gridItems, logo }) => (
             <div key={item.image} className='column is-one-third'>
               <section className='section has-section-padding-none'>
                 <div className='center'>
-                  <Link to={`/products/${item.slug}`}>
-                    <div style={{ background: `url(${item.image}) no-repeat center / cover`, height: 251, width: 168, margin: 20 }} />
+                  <Link to={`/about/${item.slug}`}>
+                    <div
+                      style={{
+                        background: `url(${item.image}) no-repeat center / cover`,
+                        height: 251,
+                        width: 168,
+                        margin: 20,
+                      }}
+                    />
                   </Link>
                 </div>
-                <h3 className='is-size-5 has-text-weight-bold has-text-ea-black' style={{ padding: 10 }} >{item.name}</h3>
-                <p className='has-text-ea-black' style={{ padding: 5 }}>{item.text}</p>
+                <h3 className='is-size-5 has-text-weight-bold has-text-ea-black' style={{ padding: 10 }}>
+                  {item.name}
+                </h3>
+                <p className='has-text-ea-black' style={{ padding: 5 }}>
+                  {item.text}
+                </p>
               </section>
             </div>
           ))}
@@ -53,7 +64,7 @@ Products.propTypes = {
   logo: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string,
-    }),
+    })
   ),
 }
 

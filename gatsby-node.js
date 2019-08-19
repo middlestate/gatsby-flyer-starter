@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const createPaginatedPages = require('gatsby-paginate')
+// const createPaginatedPages = require('gatsby-paginate')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -11,19 +11,11 @@ exports.createPages = ({ actions, graphql }) => {
       allMarkdownRemark(limit: 1000, sort: { order: DESC, fields: [frontmatter___slug] }) {
         edges {
           node {
-            excerpt(pruneLength: 400)
             id
             fields {
               slug
             }
             frontmatter {
-              title
-              product_image
-              heading
-              subheading
-              meta_title
-              meta_description
-              tags
               templateKey
             }
           }
@@ -36,33 +28,30 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const postsAndPages = result.data.allMarkdownRemark.edges
+    const mainPages = result.data.allMarkdownRemark.edges
+    const aboutPages = result.data.allMarkdownRemark.edges
 
     // Post pages:
-    let posts = []
+    let mainPosts = []
+    let aboutPosts = []
     // Iterate through each post/page, putting all found posts (where templateKey = article-page) into `posts`
-    postsAndPages.forEach(edge => {
-      if (_.isMatch(edge.node.frontmatter, { templateKey: 'product-page' })) {
-        posts = posts.concat(edge)
+    mainPages.forEach(edge => {
+      if (_.isMatch(edge.node.frontmatter, { templateKey: 'main-page' })) {
+        mainPosts = mainPosts.concat(edge)
       }
     })
 
-    createPaginatedPages({
-      edges: posts,
-      createPage: createPage,
-      pageTemplate: 'src/templates/product-page.js',
-      pageLength: 6, // This is optional and defaults to 10 if not used
-      pathPrefix: 'products', // This is optional and defaults to an empty string if not used
-      context: {}, // This is optional and defaults to an empty object if not used
+    aboutPages.forEach(edge => {
+      if (_.isMatch(edge.node.frontmatter, { templateKey: 'about-page' })) {
+        aboutPosts = aboutPosts.concat(edge)
+      }
     })
-    postsAndPages.forEach(edge => {
+
+    mainPosts.forEach(edge => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
+        component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
         // additional data can be passed via context
         context: {
           id,
@@ -70,26 +59,14 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    // Tag pages:
-    let tags = []
-    // Iterate through each post, putting all found tags into `tags`
-    postsAndPages.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-      }
-    })
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
-
-    // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
-
+    aboutPosts.forEach(edge => {
+      const id = edge.node.id
       createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+        path: edge.node.fields.slug,
+        component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
+        // additional data can be passed via context
         context: {
-          tag,
+          id,
         },
       })
     })

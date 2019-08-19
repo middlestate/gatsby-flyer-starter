@@ -10,7 +10,7 @@ public_folder: /img
 
 collections:
   - name: 'main'
-    label: 'Main'
+    label: 'Main Page'
     folder: 'src/pages/main'
     create: true
     slug: { { 'slug' } }
@@ -19,12 +19,23 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'home-page',
+          default: 'main-page',
         }
       - { label: Slug, name: slug, widget: string }
+      - { label: 'Nav Logo', name: nav_logo, widget: image }
       - { label: Title, name: title, widget: string }
       - { label: Heading, name: heading, widget: string }
       - { label: Subheading, name: subheading, widget: string }
+      - {
+          label: Hero,
+          name: hero,
+          widget: object,
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: 'Alt text', name: alt, widget: string },
+            ],
+        }
       - {
           label: Offerings,
           name: offerings,
@@ -88,10 +99,13 @@ collections:
               },
             ],
         }
+      - { label: 'Footer Logo', name: footer_logo, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Newsletter, name: newsletter, widget: string }
       - { label: 'Meta Title', name: meta_title, widget: string }
       - { label: 'Meta Description', name: meta_description, widget: text }
   - name: 'about'
-    label: 'About'
+    label: 'About Page'
     folder: 'src/pages/about'
     create: true
     slug: '{{slug}}'
@@ -100,31 +114,18 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'product-page',
+          default: 'about-page',
         }
-      - { label: Title, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: 'Nav Logo', name: nav_logo, widget: string }
+      - { label: 'Nav Logo', name: nav_logo, widget: image }
+      - { label: Title, name: title, widget: string }
       - { label: Heading, name: heading, widget: string }
-      - { label: Subheading, name: subheading, widget: string }
+      - { label: Subheading, name: subheading, widget: text }
       - { label: 'Heading Image', name: heading_image, widget: image }
       - { label: 'Hero Image', name: hero_image, widget: image }
+      - { label: 'Product Image', name: product_image, widget: image }
       - { lable: Ingredients, name: ingredients, widget: text }
-      - {
-          label: Analysis,
-          name: analysis,
-          widget: object,
-          fields:
-            [
-              {
-                label: 'Content',
-                name: content,
-                widget: list,
-                fields,
-                [{ label: Text, name: text, widget: string }],
-              },
-            ],
-        }
+      - { label: 'Nutritional Info', name: nutrition, widget: markdown }
       - {
           label: Advantages,
           name: advantages,
@@ -164,5 +165,8 @@ collections:
               { label: Title, name: title, widget: string },
             ],
         }
+      - { label: 'Footer Logo', name: footer_logo, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Newsletter, name: newsletter, widget: string }
       - { label: 'Meta Title', name: meta_title, widget: string }
       - { label: 'Meta Description', name: meta_description, widget: text }

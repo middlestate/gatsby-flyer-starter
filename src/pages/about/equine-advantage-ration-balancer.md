@@ -10,7 +10,7 @@ heading_image: /img/ea-threebagsfull.png
 hero_image:
   image: /img/horse_balance.png
   alt: image of a horse
-product_image: /img/EquineAdvantage_render.png
+product_image: /img/equineadvantage_render.png
 ingredients: >
   Dehulled Soybean Meal, Wheat Middlings, Calcium Carbonate, Dicalcium Phosphate, Suncured Alfalfa Meal, Rice Bran, Flaxseed Meal, Salt, Dried Saccharomyces cerevisiae fermentation solubles, Cane Molasses, Potassium Chloride, Iron Proteinate, Zinc Proteinate, Magnesium Oxide, Vitamin E Supplement, d-Alpha Tocopheryl Acetate, Manganese Proteinate, DL-Methionine Hydroxy Analogue, Choline Chloride, Silicon Dioxide, L-Lysine Monohydrochloride, Ascorbic Acid, Copper Proteinate, Niacin, Citric Acid, Natural Mixed Tocopherols, Rosemary Extract, Natural and Artificial Flavors added, Sodium Selenite, Biotin, Folic Acid, Riboflavin Supplement, Thiamine Mononitrate, Calcium Pantothenate, Carotene, Vitamin A Supplement, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Ethylenediamine Dihydriodide, Cobalt Sulfate, Vitamin D3 Supplement, Vegetable Oil, Manganese Sulfate, Zinc Sulfate, Copper Sulfate, Selenium Yeast, Ferrous Sulfate, Calcium Iodate, Brewer's dried yeast, hydrated sodium calcium aluminosilicate, Lignin Sulfonate, Diatomaceous Earth, Propionic Acid (a preservative), Cobalt Glucoheptonate.
 advantages:

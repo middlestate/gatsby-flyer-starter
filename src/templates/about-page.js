@@ -19,6 +19,7 @@ const AboutPage = ({ data }) => {
         heading_image={aboutPosts.frontmatter.heading_image}
         hero_image={aboutPosts.frontmatter.hero_image}
         ingredients={aboutPosts.frontmatter.ingredients}
+        product_image={aboutPosts.frontmatter.product_image}
         partners={aboutPosts.frontmatter.partners}
         quote={aboutPosts.frontmatter.quote}
         advantages={aboutPosts.frontmatter.advantages}
@@ -65,6 +66,7 @@ export const pageQuery = graphql`
           image
           alt
         }
+        product_image
         meta_title
         meta_description
         partners {

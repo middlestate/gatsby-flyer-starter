@@ -19,6 +19,44 @@ exports.createPages = ({ actions, graphql }) => {
               title
               templateKey
               slug
+              nav_logo
+              heading
+              hero_image {
+                image
+                alt
+              }
+              subheading
+              brand_heading
+              offerings {
+                blurbs {
+                  image
+                  slug
+                  name
+                  text
+                }
+              }
+              partners {
+                logo {
+                  image
+                }
+              }
+              quote {
+                text
+                name
+                title
+                image
+              }
+              advantages {
+                blurbs {
+                  image
+                  text
+                }
+              }
+              footer_logo
+              email
+              newsletter
+              meta_title
+              meta_description
             }
           }
         }

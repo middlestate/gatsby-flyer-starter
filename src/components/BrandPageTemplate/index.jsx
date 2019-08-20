@@ -9,7 +9,7 @@ import Partner from '../Partners'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 
-const MainPageTemplate = ({
+const BrandPageTemplate = ({
   title,
   meta_title,
   meta_description,
@@ -56,9 +56,8 @@ const MainPageTemplate = ({
       </div>
     </section>
     <section className='section is-paddingless' style={{ padding: 0 }}>
-      <figure className='is-3by1'>
+      <figure className='image is-3by1'>
         <img
-          className='image'
           src={hero_image.image}
           style={{ marginTop: -50 }}
           alt={hero_image.alt}
@@ -85,7 +84,7 @@ const MainPageTemplate = ({
   </div>
 )
 
-MainPageTemplate.propTypes = {
+BrandPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
@@ -117,4 +116,4 @@ MainPageTemplate.propTypes = {
   }),
 }
 
-export default MainPageTemplate
+export default BrandPageTemplate

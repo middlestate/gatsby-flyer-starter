@@ -54,9 +54,10 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'main-page',
+          default: 'brand-page',
         }
       - { label: Slug, name: slug, widget: string }
+      - { label: 'Product Slug', name: product_slug, widget: string }
       - { label: 'Nav Logo', name: nav_logo, widget: image }
       - { label: Title, name: title, widget: string }
       - { label: Heading, name: heading, widget: string }

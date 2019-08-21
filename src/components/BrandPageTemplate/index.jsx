@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import Products from '../Products'
 import Quote from '../Quote'
 import Advantage from '../Advantage'
-import Partner from '../Partners'
+// import Partner from '../Partners'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 
@@ -25,13 +25,14 @@ const BrandPageTemplate = ({
   partners,
   quote,
   advantages,
+  product_slug
 }) => (
   <div>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
-    <NavBar logo={nav_logo} />
+    <NavBar logo={nav_logo} slug={product_slug} />
     <section className='hero is-white has-section-padding-none'>
       <div className='hero-body'>
         <div className='container'>
@@ -68,7 +69,8 @@ const BrandPageTemplate = ({
       <div className='columns is-centered'>
         <div className='column is-half'>
           <div className='is-size-5 has-text-weight-bold has-text-centered has-text-black'>
-            <u>{brand_heading}</u>
+            {brand_heading}
+            <hr style={{width: '50%', maxWidth: '200px', borderTop: `2px solid black`, margin: 'auto' }} />
           </div>
         </div>
       </div>
@@ -91,6 +93,7 @@ BrandPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   brand_heading: PropTypes.string,
+  product_slug: PropTypes.string,
   hero_image: PropTypes.shape({
     image: PropTypes.string,
     alt: PropTypes.string,

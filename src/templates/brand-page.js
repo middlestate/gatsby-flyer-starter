@@ -6,27 +6,26 @@ import BrandPageTemplate from '../components/BrandPageTemplate'
 import Layout from '../components/Layout'
 
 const BrandPage = ({ data }) => {
-  const { markdownRemark: brandPosts } = data
+  const { frontmatter } = data.markdownRemark
   return (
     <Layout>
       <BrandPageTemplate
-        content={brandPosts.html}
-        contentComponent={HTMLContent}
-        nav_logo={brandPosts.frontmatter.nav_logo}
-        title={brandPosts.frontmatter.title}
-        heading={brandPosts.frontmatter.heading}
-        subheading={brandPosts.frontmatter.subheading}
-        hero_image={brandPosts.frontmatter.hero_image}
-        brand_heading={brandPosts.frontmatter.brand_heading}
-        offerings={brandPosts.frontmatter.offerings}
-        partners={brandPosts.frontmatter.partners}
-        quote={brandPosts.frontmatter.quote}
-        advantages={brandPosts.frontmatter.advantages}
-        footer_logo={brandPosts.frontmatter.footer_logo}
-        email={brandPosts.frontmatter.email}
-        newsletter={brandPosts.frontmatter.newsletter}
-        meta_title={brandPosts.frontmatter.meta_title}
-        meta_description={brandPosts.frontmatter.meta_description}
+        nav_logo={frontmatter.nav_logo}
+        product_slug={frontmatter.product_slug}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        hero_image={frontmatter.hero_image}
+        brand_heading={frontmatter.brand_heading}
+        offerings={frontmatter.offerings}
+        partners={frontmatter.partners}
+        quote={frontmatter.quote}
+        advantages={frontmatter.advantages}
+        footer_logo={frontmatter.footer_logo}
+        email={frontmatter.email}
+        newsletter={frontmatter.newsletter}
+        meta_title={frontmatter.meta_title}
+        meta_description={frontmatter.meta_description}
       />
     </Layout>
   )
@@ -43,15 +42,11 @@ BrandPage.propTypes = {
 export default BrandPage
 
 export const pageQuery = graphql`
-  query BrandPage($id: String) {
+  query BrandPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
-      html
-      fields {
-        slug
-      }
       frontmatter {
         slug
+        product_slug
         nav_logo
         title
         heading

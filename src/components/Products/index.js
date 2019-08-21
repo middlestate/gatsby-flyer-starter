@@ -7,8 +7,8 @@ const Products = ({ gridItems, logo }) => (
     <div className='columns is-centered '>
       <div className='column is-four-fifths'>
         <div className='columns is-multiline is-centered '>
-          {gridItems.map(item => (
-            <div key={item.image} className='column is-one-third'>
+          {gridItems.map((item, keys) => (
+            <div key={keys} className='column is-one-third'>
               <section className='section has-section-padding-none'>
                 <div className='center'>
                   <Link to={`/about/${item.slug}`}>
@@ -37,8 +37,8 @@ const Products = ({ gridItems, logo }) => (
     <div className='columns is-centered'>
       <div className='column is-half'>
         <div className='columns is-mobile is-centered level'>
-          {logo.map(logo => (
-            <div key={logo.image} className='column is-3'>
+          {logo.map((logo, keys) => (
+            <div key={keys} className='column is-3'>
               <section className='section' style={{ padding: 10 }}>
                 <figure className='image is-96x96 level-item'>
                   <img alt='partner logo' src={logo.image} style={{ paddingRight: 10 }} />

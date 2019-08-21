@@ -1,6 +1,7 @@
 ---
 templateKey: brand-page
 slug: ea-product-page
+product_slug: ea-product-page
 nav_logo: /img/equineadvantage_logo.svg
 title: Equine Advantage
 heading: A portrait of health, vitality and life

@@ -21,6 +21,9 @@ exports.createPages = ({ actions, graphql }) => {
               slug
               nav_logo
               heading
+              heading_image
+              product_image
+              ingredients
               hero_image {
                 image
                 alt
@@ -70,38 +73,6 @@ exports.createPages = ({ actions, graphql }) => {
 
     const allPages = result.data.allMarkdownRemark.edges
     // Post pages:
-    let aboutPosts = []
-    let brandPosts = []
-    // Iterate through each post/page, putting all found posts (where templateKey = article-page) into `posts`
-
-    allPages.forEach(edge => {
-      if (_.isMatch(edge.node.frontmatter, { templateKey: 'brand-page' })) {
-        brandPosts = brandPosts.concat(edge)
-      }
-    })
-
-    allPages.forEach(edge => {
-      if (_.isMatch(edge.node.frontmatter, { templateKey: 'about-page' })) {
-        aboutPosts = aboutPosts.concat(edge)
-      }
-    })
-
-    createPaginatedPages({
-      edges: brandPosts,
-      createPage: createPage,
-      pageTemplate: 'src/templates/brand-page.js',
-      pageLength: 6, // This is optional and defaults to 10 if not used
-      pathPrefix: 'brand', // This is optional and defaults to an empty string if not used
-      context: {}, // This is optional and defaults to an empty object if not used
-    })
-
-    createPaginatedPages({
-      edges: aboutPosts,
-      createPage: createPage,
-      pageTemplate: 'src/templates/about-page.js',
-      pathPrefix: 'about',
-      contexr: {},
-    })
 
     allPages.forEach(edge => {
       const id = edge.node.id

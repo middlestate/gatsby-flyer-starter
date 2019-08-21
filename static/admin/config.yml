@@ -158,7 +158,16 @@ collections:
       - { label: Heading, name: heading, widget: string }
       - { label: Subheading, name: subheading, widget: text }
       - { label: 'Heading Image', name: heading_image, widget: image }
-      - { label: 'Hero Image', name: hero_image, widget: image }
+      - {
+          label: 'Hero Image',
+          name: hero_image,
+          widget: object,
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: 'Alt text', name: alt, widget: string },
+            ],
+        }
       - { label: 'Product Image', name: product_image, widget: image }
       - { lable: Ingredients, name: ingredients, widget: text }
       - { label: 'Nutritional Info', name: nutrition, widget: markdown }

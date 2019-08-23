@@ -10,7 +10,7 @@ const BrandPage = ({ data }) => {
   return (
     <Layout>
       <BrandPageTemplate
-        nav_logo={frontmatter.nav_logo}
+        navbar={frontmatter.navbar}
         product_slug={frontmatter.product_slug}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -21,7 +21,7 @@ const BrandPage = ({ data }) => {
         partners={frontmatter.partners}
         quote={frontmatter.quote}
         advantages={frontmatter.advantages}
-        footer_logo={frontmatter.footer_logo}
+        footer={frontmatter.footer}
         email={frontmatter.email}
         newsletter={frontmatter.newsletter}
         meta_title={frontmatter.meta_title}
@@ -47,14 +47,19 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         product_slug
-        nav_logo
+        navbar {
+          logo
+          brand_slug
+        }
         title
         heading
         subheading
         brand_heading
-        footer_logo
-        email
-        newsletter
+        footer {
+          logo
+          email
+          newsletter
+        }
         hero_image {
           image
           alt

@@ -16,6 +16,8 @@ class NavBar extends React.Component {
   }
 
   render () {
+    const slug = this.props.slug
+    const logo = this.props.logo
     return (
       <StaticQuery
         query={graphql`
@@ -28,8 +30,8 @@ class NavBar extends React.Component {
         render={data => (
           <nav className='navbar' aria-label='main navigation'>
             <div className='navbar-brand is-centered' style={{ flex: 1, justifyContent: 'center', marginTop: -10 }}>
-              <Link to='/' className='navbar-item'>
-                <img src={this.props.logo} alt='logo' />
+              <Link to={`/brand/${slug}`} className='navbar-item'>
+                <img src={logo} alt='logo' />
               </Link>
               <div
                 className={`navbar-burger ${this.state.isActive ? 'is-active' : ''}`}
@@ -43,7 +45,10 @@ class NavBar extends React.Component {
             </div>
             <div className={`navbar-menu ${this.state.isActive ? 'is-active' : ''}`} id='navMenu'>
               <div className='navbar-end' style={{ flex: 1, justifyContent: 'center' }}>
-                <a href={`/brand/${this.props.slug}`} target='_self' className='navbar-item'>
+                <Link to='/' className='navbar-item'>
+                  Brands
+                </Link>
+                <a href={`/brand/${slug}`} target='_self' className='navbar-item'>
                   Products
                 </a>
                 <a href='#contact' target='_self' className='navbar-item'>

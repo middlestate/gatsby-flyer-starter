@@ -13,12 +13,10 @@ const BrandPageTemplate = ({
   title,
   meta_title,
   meta_description,
-  nav_logo,
+  navbar,
   hero_image,
   brand_heading,
-  footer_logo,
-  newsletter,
-  email,
+  footer,
   heading,
   subheading,
   offerings,
@@ -32,7 +30,7 @@ const BrandPageTemplate = ({
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
-    <NavBar logo={nav_logo} slug={product_slug} />
+    <NavBar logo={navbar.logo} slug={navbar.brand_slug} />
     <section className='hero is-white has-section-padding-none'>
       <div className='hero-body'>
         <div className='container'>
@@ -46,7 +44,7 @@ const BrandPageTemplate = ({
             <div className='column is-6  '>
               <div className='section is-hidden-mobile'>
                 <img
-                  src={nav_logo}
+                  src={navbar.logo}
                   style={{ height: 186, width: 350, marginTop: -10 }}
                   alt='brand logo'
                 />
@@ -79,9 +77,9 @@ const BrandPageTemplate = ({
     <Quote text={quote.text} name={quote.name} title={quote.title} image={quote.image}/>
     <Advantage gridItems={advantages.blurbs} />
     <Footer
-      logo={footer_logo}
-      email={email}
-      newsletter={newsletter}
+      logo={footer.logo}
+      email={footer.email}
+      newsletter={footer.newsletter}
       />
   </div>
 )
@@ -98,8 +96,15 @@ BrandPageTemplate.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string,
   }),
-  nav_logo: PropTypes.string,
-  footer_logo: PropTypes.string,
+  navbar: PropTypes.shape({
+    logo: PropTypes.string,
+    brand_slug: PropTypes.string
+  }),
+  footer: PropTypes.shape({
+    logo: PropTypes.string,
+    email: PropTypes.string,
+    newsletter: PropTypes.string
+  }),
   newsletter: PropTypes.string,
   email: PropTypes.string,
   offerings: PropTypes.shape({

@@ -13,14 +13,14 @@ const Advantage = ({ gridItems }) => (
       </div>
     </div>
     <div className='column is-three-fifths is-offset-one-fifth'>
-      <div className='columns is-multiline is-centered '>
+      <div className='columns is-multiline is-centered'>
         {gridItems.map(({ image, text }, keys) => (
           <div key={keys} className='column is-one-third'>
-            {/* <div className='level-item'> */}
-            {/* <figure className='image is-128x128' > */}
-            <img alt={image} src={image} style={{ margin: 50 }} />
-            {/* </figure> */}
-            {/* </div> */}
+            <div className='has-text-centered'>
+              {/* <figure className='image is-96x96'> */}
+              <img alt={image} width={100} src={image} />
+              {/* </figure> */}
+            </div>
             <p className='is-size-5 has-text-ea-black has-text-centered' style={{ paddingTop: 20 }}>
               {text}
             </p>

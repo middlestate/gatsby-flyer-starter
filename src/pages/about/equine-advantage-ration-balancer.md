@@ -1,7 +1,9 @@
 ---
 templateKey: about-page
 slug: equine-advantage-ration-balancer
-nav_logo: /img/equineadvantage_logo.svg
+navbar:
+  logo: /img/equineadvantage_logo.svg
+  brand_slug: ea-product-page
 title: Equine Advantage
 heading: 30% Ration Balancer
 subheading: >
@@ -20,18 +22,29 @@ advantages:
     - image: /img/fixed_formula-icon-01.svg
     - image: /img/omega_3_icon-01.svg
     - image: /img/biotin_enhanced_icon.svg
+partners:
+  logo:
+    - image: /img/Diamondv_logo-01.svg
+    - image: /img/grandmeadows_logo-01.svg
+    - image: /img/Diamondv_logo-01.svg
 quote:
   text: >
     "We've been feeding our champion horse Equine Advantage with great results. She really enjoys the feed and the results have been undeniable."
   name: Betsy Ross
   title: Owner of Dancing Queen
-footer_logo: /img/equineadvantage_logo_white.svg
-email: https://email.com
-newsletter: https://newsletter.com
+  image: /img/horseback.png
+footer:
+  logo: /img/equineadvantage_logo_white.svg
+  email: https://email.com
+  newsletter: https://newsletter.com
 meta_title: About Equine Advantage
 meta_desctiption: >
   Words go here
 ---
+
+## GUARANTEED ANALYSIS
+
+<span style="font-size:.75em; line-height: 2px;">
 
 |                 |      |              |             |
 | --------------- | :--: | -----------: | ----------: |
@@ -54,3 +67,13 @@ meta_desctiption: >
 | Vitamin D       | Min. |  5,000 IU/LB |             |
 | Vitamin E       | Min. |    600 IU/LB |             |
 | Biotin          | Min. |    2.2 MG/LB |             |
+
+</span>
+
+## INGREDIENTS
+
+<span style="font-size:.75em; line-height: 10px;">
+
+Dehulled Soybean Meal, Wheat Middlings, Calcium Carbonate, Dicalcium Phosphate, Suncured Alfalfa Meal, Rice Bran, Flaxseed Meal, Salt, Dried Saccharomyces cerevisiae fermentation solubles, Cane Molasses, Potassium Chloride, Iron Proteinate, Zinc Proteinate, Magnesium Oxide, Vitamin E Supplement, d-Alpha Tocopheryl Acetate, Manganese Proteinate, DL-Methionine Hydroxy Analogue, Choline Chloride, Silicon Dioxide, L-Lysine Monohydrochloride, Ascorbic Acid, Copper Proteinate, Niacin, Citric Acid, Natural Mixed Tocopherols, Rosemary Extract, Natural and Artificial Flavors added, Sodium Selenite, Biotin, Folic Acid, Riboflavin Supplement, Thiamine Mononitrate, Calcium Pantothenate, Carotene, Vitamin A Supplement, Pyridoxine Hydrochloride, Vitamin B-12 Supplement, Ethylenediamine Dihydriodide, Cobalt Sulfate, Vitamin D3 Supplement, Vegetable Oil, Manganese Sulfate, Zinc Sulfate, Copper Sulfate, Selenium Yeast, Ferrous Sulfate, Calcium Iodate, Brewer's dried yeast, hydrated sodium calcium aluminosilicate, Lignin Sulfonate, Diatomaceous Earth, Propionic Acid (a preservative), Cobalt Glucoheptonate.
+
+</span>

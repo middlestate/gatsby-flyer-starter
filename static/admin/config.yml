@@ -58,7 +58,16 @@ collections:
         }
       - { label: Slug, name: slug, widget: string }
       - { label: 'Product Slug', name: product_slug, widget: string }
-      - { label: 'Nav Logo', name: nav_logo, widget: image }
+      - {
+          label: 'NavBar',
+          name: navbar,
+          widget: object,
+          fields:
+            [
+              { label: Logo, name: logo, widget: string },
+              { label: 'Brand Slug', name: brand_slug, widget: string },
+            ],
+        }
       - { label: Title, name: title, widget: string }
       - { label: Heading, name: heading, widget: string }
       - { label: Subheading, name: subheading, widget: string }
@@ -115,6 +124,7 @@ collections:
               { label: Text, name: text, widget: text },
               { label: Name, name: name, widget: string },
               { label: Title, name: title, widget: string },
+              { label: Image, name: image, widget: image },
             ],
         }
       - {
@@ -135,9 +145,17 @@ collections:
               },
             ],
         }
-      - { label: 'Footer Logo', name: footer_logo, widget: string }
-      - { label: Email, name: email, widget: string }
-      - { label: Newsletter, name: newsletter, widget: string }
+      - {
+          label: 'Footer',
+          name: footer,
+          widget: object,
+          fields:
+            [
+              { label: Logo, name: logo, widget: string },
+              { label: Email, name: email, widget: string },
+              { label: Newsletter, name: newsletter, widget: string },
+            ],
+        }
       - { label: 'Meta Title', name: meta_title, widget: string }
       - { label: 'Meta Description', name: meta_description, widget: text }
   - name: 'about'
@@ -153,7 +171,16 @@ collections:
           default: 'about-page',
         }
       - { label: Slug, name: slug, widget: string }
-      - { label: 'Nav Logo', name: nav_logo, widget: image }
+      - {
+          label: 'NavBar',
+          name: navbar,
+          widget: object,
+          fields:
+            [
+              { label: Logo, name: logo, widget: string },
+              { label: 'Brand Slug', name: brand_slug, widget: string },
+            ],
+        }
       - { label: Title, name: title, widget: string }
       - { label: Heading, name: heading, widget: string }
       - { label: Subheading, name: subheading, widget: text }
@@ -208,10 +235,19 @@ collections:
               { label: Text, name: text, widget: text },
               { label: Name, name: name, widget: string },
               { label: Title, name: title, widget: string },
+              { label: Image, name: image, widget: image },
             ],
         }
-      - { label: 'Footer Logo', name: footer_logo, widget: string }
-      - { label: Email, name: email, widget: string }
-      - { label: Newsletter, name: newsletter, widget: string }
+      - {
+          label: 'Footer',
+          name: footer,
+          widget: object,
+          fields:
+            [
+              { label: Logo, name: logo, widget: string },
+              { label: Email, name: email, widget: string },
+              { label: Newsletter, name: newsletter, widget: string },
+            ],
+        }
       - { label: 'Meta Title', name: meta_title, widget: string }
       - { label: 'Meta Description', name: meta_description, widget: text }

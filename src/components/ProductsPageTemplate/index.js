@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Content from '../Content'
 import { kebabCase } from 'lodash'
 import { Link } from 'gatsby'
+import NavBar from '../NavBar'
 
 const ProductsPageTemplate = ({
   content,
@@ -16,28 +17,29 @@ const ProductsPageTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   return (
-    <div>
-      <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
-        {meta_title}
-      </h1>
-      <h2 className='subtitle is-size-6 has-text-weight-light is-italic'>{meta_description}</h2>
-      <img src={product_image} alt={subheading} />
-      <PostContent content={content} />
-      <div style={{ marginTop: `4rem` }}>
-        <h4>Tags</h4>
-        <ul className='taglist'>
-          {(tags && tags.length)
-            ? tags.map(tag => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))
-            : null
-          }
-        </ul>
+    <Fragment>
+      <NavBar />
+      <div>
+        <p>hello!!!!</p>
+        <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>{meta_title}</h1>
+        <h2 className='subtitle is-size-6 has-text-weight-light is-italic'>{meta_description}</h2>
+        <img src={product_image} alt={subheading} />
+        <div className='columns is-multiline is-mobile is-centered'>
+          <div className='column is-5 is-half-mobile'>
+            <figure className='image is-256x256 is-hidden-mobile'>
+              <img style={{ paddingRight: 55 }} src={product_image} alt={subheading} />
+            </figure>
+          </div>
+          <div className='column is-4 is-half-mobile'>
+            <div className='is-size-7' style={{ height: 700, width: 320, float: 'right' }}>
+              <PostContent content={content} />
+            </div>
+          </div>
+        </div>
+
+        <hr />
       </div>
-      <hr />
-    </div>
+    </Fragment>
   )
 }
 

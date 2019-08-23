@@ -6,28 +6,26 @@ import AboutPageTemplate from '../components/AboutPageTemplate'
 import Layout from '../components/Layout'
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: aboutPosts } = data
+  const { markdownRemark: allPages } = data
   return (
     <Layout>
       <AboutPageTemplate
-        content={aboutPosts.html}
+        content={allPages.html}
         contentComponent={HTMLContent}
-        nav_logo={aboutPosts.frontmatter.nav_logo}
-        title={aboutPosts.frontmatter.title}
-        heading={aboutPosts.frontmatter.heading}
-        subheading={aboutPosts.frontmatter.subheading}
-        heading_image={aboutPosts.frontmatter.heading_image}
-        hero_image={aboutPosts.frontmatter.hero_image}
-        ingredients={aboutPosts.frontmatter.ingredients}
-        product_image={aboutPosts.frontmatter.product_image}
-        partners={aboutPosts.frontmatter.partners}
-        quote={aboutPosts.frontmatter.quote}
-        advantages={aboutPosts.frontmatter.advantages}
-        footer_logo={aboutPosts.frontmatter.footer_logo}
-        email={aboutPosts.frontmatter.email}
-        newsletter={aboutPosts.frontmatter.newsletter}
-        meta_title={aboutPosts.frontmatter.meta_title}
-        meta_description={aboutPosts.frontmatter.meta_description}
+        navbar={allPages.frontmatter.navbar}
+        title={allPages.frontmatter.title}
+        heading={allPages.frontmatter.heading}
+        subheading={allPages.frontmatter.subheading}
+        heading_image={allPages.frontmatter.heading_image}
+        hero_image={allPages.frontmatter.hero_image}
+        ingredients={allPages.frontmatter.ingredients}
+        product_image={allPages.frontmatter.product_image}
+        partners={allPages.frontmatter.partners}
+        quote={allPages.frontmatter.quote}
+        advantages={allPages.frontmatter.advantages}
+        footer={allPages.frontmatter.footer}
+        meta_title={allPages.frontmatter.meta_title}
+        meta_description={allPages.frontmatter.meta_description}
       />
     </Layout>
   )
@@ -53,15 +51,20 @@ export const pageQuery = graphql`
       }
       frontmatter {
         slug
-        nav_logo
+        navbar {
+          logo
+          brand_slug
+        }
         title
         heading
         subheading
         heading_image
         ingredients
-        footer_logo
-        email
-        newsletter
+        footer {
+          email
+          newsletter
+          logo
+        }
         hero_image {
           image
           alt
@@ -81,9 +84,8 @@ export const pageQuery = graphql`
           image
         }
         advantages {
-          blurbs {
+          icon {
             image
-            text
           }
         }
       }

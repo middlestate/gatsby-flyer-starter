@@ -2,7 +2,9 @@
 templateKey: brand-page
 slug: ea-product-page
 product_slug: ea-product-page
-nav_logo: /img/equineadvantage_logo.svg
+navbar:
+  logo: /img/equineadvantage_logo.svg
+  brand_slug: ea-product-page
 title: Equine Advantage
 heading: A portrait of health, vitality and life
 hero_image:
@@ -45,9 +47,10 @@ advantages:
     - image: /img/biotin_enhanced_icon.svg
       text: >
         Pre and pro biotics enables optimum digestion and helps maintain intestinal health
-footer_logo: /img/equineadvantage_logo_white.svg
-email: https://email.com
-newsletter: https://newsletter.com
+footer:
+  logo: /img/equineadvantage_logo_white.svg
+  email: https://email.com
+  newsletter: https://newsletter.com
 meta_title: Equine Advantage
 meta_description: >-
   The best a horse can get.

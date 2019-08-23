@@ -18,7 +18,6 @@ const AboutPage = ({ data }) => {
         subheading={allPages.frontmatter.subheading}
         heading_image={allPages.frontmatter.heading_image}
         hero_image={allPages.frontmatter.hero_image}
-        ingredients={allPages.frontmatter.ingredients}
         product_image={allPages.frontmatter.product_image}
         partners={allPages.frontmatter.partners}
         quote={allPages.frontmatter.quote}
@@ -59,7 +58,6 @@ export const pageQuery = graphql`
         heading
         subheading
         heading_image
-        ingredients
         footer {
           email
           newsletter

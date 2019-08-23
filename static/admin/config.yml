@@ -196,7 +196,6 @@ collections:
             ],
         }
       - { label: 'Product Image', name: product_image, widget: image }
-      - { lable: Ingredients, name: ingredients, widget: text }
       - { label: 'Nutritional Info', name: nutrition, widget: markdown }
       - {
           label: Advantages,

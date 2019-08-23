@@ -12,7 +12,7 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
       <div className='columns'>
         <div className='column is-10 is-offset-1'>
           <AboutPageTemplate
-            content={widgetFor('nutrition')}
+            content={widgetFor('body')}
             product_image={entry.getIn(['data', 'product_image'])}
             meta_title={entry.getIn(['data', 'meta_title'])}
             meta_description={entry.getIn(['data', 'meta_description'])}

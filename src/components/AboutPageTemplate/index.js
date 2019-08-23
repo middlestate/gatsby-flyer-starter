@@ -4,7 +4,6 @@ import Content from '../Content'
 import NavBar from '../NavBar'
 import Quote from '../Quote'
 import Footer from '../Footer'
-import { faFileExcel } from '@fortawesome/free-regular-svg-icons'
 
 const AboutPageTemplate = ({
   content,

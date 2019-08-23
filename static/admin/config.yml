@@ -196,7 +196,7 @@ collections:
             ],
         }
       - { label: 'Product Image', name: product_image, widget: image }
-      - { label: 'Nutritional Info', name: nutrition, widget: markdown }
+      - { label: 'Nutritional Info', name: body, widget: markdown }
       - {
           label: Advantages,
           name: advantages,
@@ -243,7 +243,7 @@ collections:
           widget: object,
           fields:
             [
-              { label: Logo, name: logo, widget: string },
+              { label: Logo, name: logo, widget: image },
               { label: Email, name: email, widget: string },
               { label: Newsletter, name: newsletter, widget: string },
             ],

@@ -16,10 +16,6 @@ const AboutPagePreview = ({ entry, getAsset, widgetFor }) => {
             product_image={entry.getIn(['data', 'product_image'])}
             meta_title={entry.getIn(['data', 'meta_title'])}
             meta_description={entry.getIn(['data', 'meta_description'])}
-            navbar={{
-              logo: entry.getIn(['data', 'navbar', 'logo']),
-              brand_slug: entry.getIn(['data', 'navbar', 'brand_slug']),
-            }}
             hero_image={{
               image: entry.getIn(['data', 'hero_image', 'image']),
               alt: entry.getIn(['data', 'hero_image', 'alt']),
@@ -36,11 +32,6 @@ const AboutPagePreview = ({ entry, getAsset, widgetFor }) => {
               name: entry.getIn(['data', 'quote', 'name']),
               title: entry.getIn(['data', 'quote', 'title']),
               image: entry.getIn(['data', 'quote', 'image']),
-            }}
-            footer={{
-              logo: entry.getIn(['data', 'footer', 'logo']),
-              email: entry.getIn(['data', 'footer', 'email']),
-              newsletter: entry.getIn(['data', 'footer', 'newsletter']),
             }}
             slug={entry.getIn(['data', 'slug'])}
           />

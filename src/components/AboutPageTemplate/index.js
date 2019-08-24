@@ -1,14 +1,13 @@
 import React, { Fragment } from 'react'
 // import { Link } from 'gatsby'
 import Content from '../Content'
-import NavBar from '../NavBar'
+// import NavBar from '../NavBar'
 import Quote from '../Quote'
-import Footer from '../Footer'
+// import Footer from '../Footer'
 
 const AboutPageTemplate = ({
   content,
   contentComponent,
-  navbar,
   title,
   heading,
   subheading,
@@ -19,7 +18,6 @@ const AboutPageTemplate = ({
   partners,
   quote,
   md_stuff,
-  footer,
   meta_title,
   meta_description,
 }) => {

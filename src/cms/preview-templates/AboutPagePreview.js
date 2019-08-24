@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AboutPageTemplate from '../../components/AboutPageTemplate'
 
-const AboutPagePreview = ({ entry, widgetFor }) => {
+const AboutPagePreview = ({ entry, getAsset, widgetFor }) => {
   const entryIcon = entry.getIn(['data', 'advantages', 'icon'])
   const icon = entryIcon ? entryIcon.toJS() : []
   const entryLogo = entry.getIn(['data', 'partners', 'logo'])
@@ -55,6 +55,7 @@ AboutPagePreview.propTypes = {
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
+  getAsset: PropTypes.func,
 }
 
 export default AboutPagePreview

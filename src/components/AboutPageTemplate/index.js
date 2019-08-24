@@ -18,6 +18,7 @@ const AboutPageTemplate = ({
   advantages,
   partners,
   quote,
+  md_stuff,
   footer,
   meta_title,
   meta_description,

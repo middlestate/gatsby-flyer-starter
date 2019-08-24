@@ -3,12 +3,15 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { HTMLContent } from '../components/Content'
 import AboutPageTemplate from '../components/AboutPageTemplate'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: allPages } = data
   return (
     <Layout>
+      <NavBar logo={allPages.frontmatter.navbar.logo} slug={allPages.frontmatter.navbar.brand_slug} />
       <AboutPageTemplate
         content={allPages.html}
         contentComponent={HTMLContent}
@@ -25,6 +28,11 @@ const AboutPage = ({ data }) => {
         footer={allPages.frontmatter.footer}
         meta_title={allPages.frontmatter.meta_title}
         meta_description={allPages.frontmatter.meta_description}
+      />
+      <Footer
+        logo={allPages.frontmatter.footer.logo}
+        email={allPages.frontmatter.footer.email}
+        newsletter={allPages.frontmatter.footer.newsletter}
       />
     </Layout>
   )

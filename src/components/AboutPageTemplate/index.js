@@ -26,9 +26,7 @@ const AboutPageTemplate = ({
   return (
     <Fragment>
       <div className='section hero is-fullheight-with-navbar is-paddingless'>
-        <div className='hero-head'>
-          <NavBar logo={navbar.logo} slug={navbar.brand_slug} />
-        </div>
+        <div className='hero-head'>{/* <NavBar logo={navbar.logo} slug={navbar.brand_slug} /> */}</div>
         <div className='hero-body'>
           <div className='container content'>
             <div className='columns is-10 is-offset-1'>
@@ -125,7 +123,7 @@ const AboutPageTemplate = ({
       </div>
       {/* Footer */}
       <div className='section is-paddingless is-marginless' style={{ marginTop: 50, paddingTop: 50 }}>
-        <Footer logo={footer.logo} email={footer.email} newsletter={footer.newsletter} />
+        {/* <Footer logo={footer.logo} email={footer.email} newsletter={footer.newsletter} /> */}
       </div>
     </Fragment>
   )

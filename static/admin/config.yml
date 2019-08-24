@@ -222,8 +222,8 @@ collections:
           fields:
             [
               {
-                label: Icon,
-                name: icon,
+                label: Logo,
+                name: logo,
                 widget: list,
                 fields: [{ label: Image, name: image, widget: image }],
               },

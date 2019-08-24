@@ -7,5 +7,5 @@ import ContactPagePreview from './preview-templates/ContactPagePreview'
 
 CMS.registerPreviewTemplate('home', HomePagePreview)
 CMS.registerPreviewTemplate('brand', BrandPagePreview)
-CMS.registerPreviewTemplate('products', AboutPagePreview)
+CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('contact', ContactPagePreview)

@@ -68,7 +68,7 @@ const AboutPageTemplate = ({
         </div>
       </div>
       {/* Product Section */}
-      <div className='section'>
+      <div className='section' style={{ marginBottom: 20 }}>
         <div className='container content'>
           <div className='columns is-centered-mobile'>
             <div className='column is-full '>
@@ -84,7 +84,7 @@ const AboutPageTemplate = ({
                 {/* Ingredients */}
                 <div className='tile is-7 is-parent '>
                   <div className='tile is-child is-paddingless is-marginless'>
-                    <div className='is-size-7' style={{ height: 450, width: 320 }}>
+                    <div className='is-size-7' style={{ height: 450, width: 320, marginBottom: 120 }}>
                       <PostContent content={content} />
                     </div>
                   </div>
@@ -95,7 +95,7 @@ const AboutPageTemplate = ({
         </div>
       </div>
       {/* Advantages */}
-      <div className='section is-marginless is-block'>
+      <div className='section  is-block' style={{ paddingTop: 20 }}>
         <div className='columns is-multiline is-centered is-mobile'>
           {advantages.icon.map((images, keys) => (
             <div key={keys} className='column is-4-mobile is-1-desktop is-block'>

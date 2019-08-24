@@ -40,6 +40,8 @@ meta_desctiption: >
   Words go here
 ---
 
+<!-- DO NOT EDIT WITH RICH TEXT EDITOR, ONLY USE MARKDOWN, OR NETLIFY CMS WILL STRIP THE TABLE FORMATTING -->
+
 ## GUARANTEED ANALYSIS
 
 <span style="font-size:.75em; line-height: 10px;">

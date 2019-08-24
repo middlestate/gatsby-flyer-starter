@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { HTMLContent } from '../components/Content'
+// import { HTMLContent } from '../components/Content'
 import BrandPageTemplate from '../components/BrandPageTemplate'
 import Layout from '../components/Layout'
 
@@ -44,6 +44,11 @@ export default BrandPage
 export const pageQuery = graphql`
   query BrandPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      id
+      html
+      fields {
+        slug
+      }
       frontmatter {
         slug
         product_slug

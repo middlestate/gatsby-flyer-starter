@@ -27,7 +27,7 @@ collections:
           - {
               label: Brands,
               name: brands,
-              widget: fields,
+              widget: object,
               fields:
                 [
                   {

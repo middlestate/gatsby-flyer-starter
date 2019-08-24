@@ -29,7 +29,7 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
             subheading={entry.getIn(['data', 'subheading'])}
             heading_image={entry.getIn(['data', 'heading_image'])}
             ingredients={entry.getIn(['data', 'ingredients'])}
-            partners={{ logo }}
+            partners={entry.getIn(['data', 'partners'])}
             advantages={entry.getIn(['data', 'advantages'])}
             quote={{
               text: entry.getIn(['data', 'quote', 'text']),

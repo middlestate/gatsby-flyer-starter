@@ -42,7 +42,7 @@ meta_desctiption: >
 
 ## GUARANTEED ANALYSIS
 
-<span style="font-size:.75em; line-height: 2px;">
+<span style="font-size:.75em; line-height: 10px;">
 
 |                 |      |              |             |
 | --------------- | :--: | -----------: | ----------: |

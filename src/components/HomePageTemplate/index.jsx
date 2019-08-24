@@ -24,14 +24,18 @@ const HomePageTemplate = ({ brands, title, subtitle }) => (
 )
 
 HomePageTemplate.propTypes = {
-  brands: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string,
-      alt: PropTypes.string,
-      text: PropTypes.string,
-      slug: PropTypes.string,
-    })
-  ),
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  brands: PropTypes.shape({
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        image: PropTypes.string,
+        alt: PropTypes.string,
+        text: PropTypes.string,
+        slug: PropTypes.string
+      })
+    )
+  })
 }
 
 export default HomePageTemplate

@@ -4,7 +4,7 @@ slug: equine-advantage-ration-balancer
 navbar:
   logo: /img/equineadvantage_logo.svg
   brand_slug: ea-product-page
-title: Equine Advantage
+title: Equine Advantage 30% Ration Balancer
 heading: 30% Ration Balancer
 subheading: >
   A pelleted feed that is concentrated and designed to be fed along with quality hay or pasture. Fortified with Grand Meadows supplement for optimum levels of vitamins and trace minerals.

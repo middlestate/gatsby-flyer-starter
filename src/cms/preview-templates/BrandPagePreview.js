@@ -23,7 +23,7 @@ const BrandPagePreview = ({ entry, getAsset }) => {
       }}
       navbar={{
         logo: entry.getIn(['data', 'navbar', 'logo']),
-        brand_slug: entry.getIn(['data', 'navbar', 'brand_logo']),
+        brand_slug: entry.getIn(['data', 'navbar', 'brand_slug']),
       }}
       heading={entry.getIn(['data', 'heading'])}
       subheading={entry.getIn(['data', 'subheading'])}

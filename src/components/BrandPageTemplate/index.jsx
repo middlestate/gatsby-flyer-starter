@@ -130,18 +130,11 @@ BrandPageTemplate.propTypes = {
     email: PropTypes.string,
     newsletter: PropTypes.string
   }),
-  newsletter: PropTypes.string,
-  email: PropTypes.string,
   offerings: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
   partners: PropTypes.shape({
-    logo: PropTypes.arrayOf(
-      PropTypes.shape({
-        image: PropTypes.string,
-        text: PropTypes.string
-      })
-    ),
+    logo: PropTypes.array
   }),
   quote: PropTypes.shape({
     text: PropTypes.string,
@@ -150,7 +143,12 @@ BrandPageTemplate.propTypes = {
     image: PropTypes.string
   }),
   advantages: PropTypes.shape({
-    blurbs: PropTypes.array,
+    blurbs: PropTypes.arrayOf(
+      PropTypes.shape({
+        image: PropTypes.string,
+        text: PropTypes.string
+      })
+    ),
   }),
 }
 

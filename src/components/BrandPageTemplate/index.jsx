@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import Products from '../Products'
 import Quote from '../Quote'
-import Advantage from '../Advantage'
+// import Advantage from '../Advantage'
 // import Partner from '../Partners'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
@@ -75,7 +75,32 @@ const BrandPageTemplate = ({
       <Products gridItems={offerings.blurbs} logo={partners.logo} />
     </section>
     <Quote text={quote.text} name={quote.name} title={quote.title} image={quote.image}/>
-    <Advantage advantage={advantages.blurbs} />
+    {/* <Advantage advantage={advantages.blurbs} /> */}
+    <div className='section'>
+    <div className='columns is-centered'>
+      <div className='column is-half'>
+        <h1 className='is-size-4 has-text-ea-black has-text-centered'>
+          <strong>
+            <u>WHAT MAKES EA DIFFERENT</u>
+          </strong>
+        </h1>
+      </div>
+    </div>
+    <div className='column is-three-fifths is-offset-one-fifth'>
+      <div className='columns is-multiline is-centered'>
+        {advantages.blurbs.map(({ image, text }, keys) => (
+          <div key={keys} className='column is-one-third'>
+            <div className='has-text-centered'>
+              <img alt='advantage icon' width={100} src={image} />
+            </div>
+            <p className='is-size-5 has-text-ea-black has-text-centered' style={{ paddingTop: 20 }}>
+              {text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
     <Footer
       logo={footer.logo}
       email={footer.email}
@@ -111,7 +136,12 @@ BrandPageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   partners: PropTypes.shape({
-    logo: PropTypes.array,
+    logo: PropTypes.arrayOf(
+      PropTypes.shape({
+        image: PropTypes.string,
+        text: PropTypes.string
+      })
+    ),
   }),
   quote: PropTypes.shape({
     text: PropTypes.string,

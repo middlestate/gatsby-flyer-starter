@@ -75,7 +75,7 @@ const BrandPageTemplate = ({
       <Products gridItems={offerings.blurbs} logo={partners.logo} />
     </section>
     <Quote text={quote.text} name={quote.name} title={quote.title} image={quote.image}/>
-    <Advantage gridItems={advantages.blurbs} />
+    <Advantage advantage={advantages.blurbs} />
     <Footer
       logo={footer.logo}
       email={footer.email}

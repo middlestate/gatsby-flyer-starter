@@ -20,7 +20,7 @@ const ProductsPageTemplate = ({
     <Fragment>
       <NavBar />
       <div>
-        <p>hello!!!!</p>
+        <p className='has-text-black is-size-3'>hello!!!!</p>
         <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>{meta_title}</h1>
         <h2 className='subtitle is-size-6 has-text-weight-light is-italic'>{meta_description}</h2>
         <img src={product_image} alt={subheading} />

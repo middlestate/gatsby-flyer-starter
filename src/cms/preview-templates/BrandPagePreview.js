@@ -13,7 +13,6 @@ const BrandPagePreview = ({ entry, getAsset }) => {
 
   return (
     <BrandPageTemplate
-      slug={entry.getIn(['data', 'slug'])}
       product_slug={entry.getIn(['data', 'product_slug'])}
       title={entry.getIn(['data', 'title'])}
       meta_title={entry.getIn(['data', 'meta_title'])}
@@ -29,7 +28,6 @@ const BrandPagePreview = ({ entry, getAsset }) => {
       heading={entry.getIn(['data', 'heading'])}
       subheading={entry.getIn(['data', 'subheading'])}
       brand_heading={entry.getIn(['data', 'brand_heading'])}
-      description={entry.getIn(['data', 'description'])}
       offerings={{ blurbs }}
       partners={{ logo }}
       quote={{

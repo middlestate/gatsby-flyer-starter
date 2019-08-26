@@ -10,7 +10,7 @@ brands:
       text: Equine Advantage
     - alt: test new brand add
       image: /img/EquineAdvantage_Render-2@2x.png
-      slug: equine2-product-page
+      slug: equine2-testing-brand
       text: EA2-Products
 ---
 

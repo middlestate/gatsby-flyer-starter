@@ -2,7 +2,7 @@
 templateKey: about-page
 slug: ea2-senior
 navbar:
-  brand_slug: ea-product-page
+  brand_slug: ea2-product-page
   logo: /img/equineadvantage_logo.svg
 title: EA2 Senior
 heading: Senior

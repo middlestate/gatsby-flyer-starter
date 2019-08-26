@@ -18,6 +18,11 @@ offerings:
       name: Senior
       slug: ea2-senior
       text: Old horses love this stuff!
+partners:
+  logo:
+    - image: /img/Diamondv_logo-01.svg
+    - image: /img/grandmeadows_logo-01.svg
+    - image: /img/equineadvantage_logo.svg
 quote:
   image: /img/horse_balance.png
   name: middlestate

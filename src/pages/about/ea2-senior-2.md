@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-slug: ea2-senior
+slug: ea2-senior-2
 navbar:
   brand_slug: equine2-testing-brand
   logo: /img/equineadvantage_logo.svg

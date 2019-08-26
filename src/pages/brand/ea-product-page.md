@@ -31,7 +31,7 @@ quote:
   title: Owner of Dancing Queen
   image: /img/horseback.png
 advantages:
-  blurbs:
+  icon:
     - image: /img/fixed_formula-icon-01.svg
       text: >
         Our formulas are set by nutrionist and never varies until the formula or ingredients are updated to meet requirements

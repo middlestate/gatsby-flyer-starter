@@ -88,7 +88,7 @@ const BrandPageTemplate = ({
     </div>
     <div className='column is-three-fifths is-offset-one-fifth'>
       <div className='columns is-multiline is-centered'>
-        {advantages.blurbs.map(({ image, text }, keys) => (
+        {advantages.icon.map(({ image, text }, keys) => (
           <div key={keys} className='column is-one-third'>
             <div className='has-text-centered'>
               <img alt='advantage icon' width={100} src={image} />
@@ -143,7 +143,7 @@ BrandPageTemplate.propTypes = {
     image: PropTypes.string
   }),
   advantages: PropTypes.shape({
-    blurbs: PropTypes.arrayOf(
+    icon: PropTypes.arrayOf(
       PropTypes.shape({
         image: PropTypes.string,
         text: PropTypes.string

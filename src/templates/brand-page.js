@@ -22,8 +22,6 @@ const BrandPage = ({ data }) => {
         quote={frontmatter.quote}
         advantages={frontmatter.advantages}
         footer={frontmatter.footer}
-        email={frontmatter.email}
-        newsletter={frontmatter.newsletter}
         meta_title={frontmatter.meta_title}
         meta_description={frontmatter.meta_description}
       />
@@ -91,7 +89,7 @@ export const pageQuery = graphql`
           image
         }
         advantages {
-          blurbs {
+          icon {
             image
             text
           }

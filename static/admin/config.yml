@@ -132,14 +132,14 @@ collections:
             ],
         }
       - {
-          label: Advantage,
+          label: Advantages,
           name: advantages,
           widget: object,
           fields:
             [
               {
-                label: Blurbs,
-                name: blurbs,
+                label: Icon,
+                name: icon,
                 widget: list,
                 fields:
                   [

@@ -8,8 +8,8 @@ const BrandPagePreview = ({ entry, getAsset }) => {
   const entryPartnerLogo = entry.getIn(['data', 'partners', 'logo'])
   const logo = entryPartnerLogo ? entryPartnerLogo.toJS() : []
 
-  const entryAdvantage = entry.getIn(['data', 'advantages', 'blurbs'])
-  const advantage = entryAdvantage ? entryAdvantage.toJS() : []
+  const entryIcon = entry.getIn(['data', 'advantages', 'icon'])
+  const icon = entryIcon ? entryIcon.toJS() : []
 
   return (
     <BrandPageTemplate
@@ -36,7 +36,7 @@ const BrandPagePreview = ({ entry, getAsset }) => {
         title: entry.getIn(['data', 'quote', 'title']),
         image: entry.getIn(['data', 'quote', 'image']),
       }}
-      advantages={{ advantage }}
+      advantages={{ icon }}
       footer={{
         logo: entry.getIn(['data', 'footer', 'logo']),
         email: entry.getIn(['data', 'footer', 'email']),

@@ -1,9 +1,9 @@
 ---
 templateKey: brand-page
-slug: e2-product-page
-product_slug: e2-product-page
+slug: equine2-testing-brand
+product_slug: equine2-testing-brand
 navbar:
-  brand_slug: e2-product-page
+  brand_slug: equine2-testing-brand
   logo: /img/equineadvantage_logo.svg
 title: Equine2 Testing Brand
 brand_heading: 'EQUINE TEST ADVANTAGE PRODUCTS '

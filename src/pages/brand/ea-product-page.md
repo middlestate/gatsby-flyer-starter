@@ -6,6 +6,7 @@ navbar:
   brand_slug: ea-product-page
   logo: /img/equineadvantage_logo.svg
 title: Equine Advantage
+brand_heading: EQUINE ADVANTAGE PRODUCTS
 heading: 'A portrait of health, vitality and life'
 subheading: Formulated by veteran
 hero_image:
@@ -72,4 +73,3 @@ footer:
 meta_title: Equine Advantage
 meta_description: The best a horse can get.
 ---
-

@@ -16,7 +16,7 @@ offerings:
   blurbs:
     - image: /img/EquineAdvantage_Render-4_2x.png
       name: Senior
-      slug: ea2-senior
+      slug: ea2-senior-2
       text: Old horses love this stuff!
 partners:
   logo:
